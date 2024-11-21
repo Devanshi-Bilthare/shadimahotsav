@@ -42,7 +42,7 @@ const RegisterFranchise = () => {
       });
     } catch (error) {
       console.error('Error registering franchise:', error);
-      setErrorMessage('Failed to register franchise. Please try again.');
+      setErrorMessage(error.response.data.message);
     }
   };
 
